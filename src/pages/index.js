@@ -48,7 +48,7 @@ export default function MainPage() {
               <img src="/user-avatar.png" alt="User" className="user-avatar" />
             </div>
             <div className="greeting-text">
-              <h1>Good morning, Anne Emilie</h1>
+              <h1>Good morning, Aurora</h1>
               <p>Keep it up 🧶 Your overview so far this year:</p>
             </div>
           </div>
