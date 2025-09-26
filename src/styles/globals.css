@@ -124,6 +124,18 @@ body {
   display: flex;
 }
 
+/* Remove lines from icon links */
+.expanded-icons a {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.expanded-icons .icon-button {
+  border: none;
+  text-decoration: none;
+}
+
+
 /* Main Content Area */
 .main-content-area {
   margin-top: 60px;
