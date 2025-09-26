@@ -49,7 +49,7 @@ export default function MainPage() {
             </div>
             <div className="greeting-text">
               <h1>Good morning, Aurora</h1>
-              <p> keep up the progress 🧶 Your year in yarn so far:</p>
+              <p> keep up the progress 🧶 Your stats this year:</p>
             </div>
           </div>
           
