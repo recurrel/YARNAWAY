@@ -76,8 +76,8 @@ body {
 /* Right Side: Icons Bar */
 .icons-bar {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 100px;
+  right: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
