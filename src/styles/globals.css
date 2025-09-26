@@ -126,9 +126,9 @@ body {
 
 /* Main Content Area */
 .main-content-area {
-  margin-top: 150px;
+  margin-top: 100px;
   padding: 20px;
-  min-height: calc(100vh - 150px);
+  min-height: calc(100vh - 100px);
 }
 
 /* Page-specific content styles */
