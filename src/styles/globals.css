@@ -268,10 +268,10 @@ body {
   font-size: 0.9rem;
 }
 
-/* Categories Grid - 2 rows × 7 columns */
+/* Categories Grid */
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
   margin-top: 20px;
 }
@@ -283,38 +283,20 @@ body {
   justify-content: center;
   padding: 20px;
   border-radius: 15px;
-  text-decoration: none;
+  border: 3px solid rgba(139, 90, 43, 0.3);
   color: #333;
   text-align: center;
-  aspect-ratio: 1 / 1;
-  min-height: 120px;
+  min-height: 140px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  border: 2px solid transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-  user-select: none;
-}
-
-/* MOBILE VERSION - put this right here */
-@media (max-width: 768px) {
-  .categories-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-  }
-  
-  .category-card {
-    min-height: 100px;
-    padding: 15px;
-  }
+  overflow: hidden;
 }
 
 .category-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  border-color: rgba(0, 0, 0, 0.1);
+  border: 3px solid #8b5a2b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .category-icon {
@@ -324,30 +306,34 @@ body {
 
 .category-name {
   font-weight: bold;
-  font-size: 1.1rem;
-  line-height: 1.3;
+  font-size: 1rem;
+  line-height: 1.2;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
-/* Mobile: 2 columns × 7 rows */
+/* Mobile Version */
 @media (max-width: 768px) {
   .categories-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    gap: 10px;
   }
   
   .category-card {
-    min-height: 100px;
+    min-height: 120px;
     padding: 15px;
   }
   
   .category-icon {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-bottom: 10px;
   }
   
   .category-name {
     font-size: 0.9rem;
   }
 }
+
 .back-button {
   margin-top: 20px;
 }
