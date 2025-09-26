@@ -1,7 +1,10 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Header() {
   const [isSearchExpanded, setSearchExpanded] = useState(false);
+  const router = useRouter();
+  const isHomepage = router.pathname === '/';
 
   return (
     <header className="header">
@@ -16,16 +19,17 @@ export default function Header() {
             <img src="/logo.png" alt="Yarnaway Logo" className="logo" />
           </a>
           
-          {/* User Profile Section */}
-          <div className="user-profile">
-            <img src="/user-avatar.png" alt="User" className="user-avatar" />
-            <span className="username">#user_name</span>
-          </div>
+          {/* User Profile Section - Hidden on Homepage */}
+          {!isHomepage && (
+            <div className="user-profile">
+              <img src="/user-avatar.png" alt="User" className="user-avatar" />
+              <span className="username">#user_name</span>
+            </div>
+          )}
         </div>
 
         {/* Right Side: Icons Bar */}
         <div className={`icons-bar ${isSearchExpanded ? 'expanded' : ''}`}>
-          {/* Search Icon - Triggers Expansion */}
           <button 
             className="icon-button search-icon"
             onClick={() => setSearchExpanded(!isSearchExpanded)}
@@ -33,7 +37,6 @@ export default function Header() {
             🔍
           </button>
 
-          {/* Expanded Icons (shown when search is clicked) */}
           <div className="expanded-icons">
             <a href="/settings" className="icon-button">
               ⚙️
